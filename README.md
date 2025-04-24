@@ -24,6 +24,7 @@
 7. [Tutorials](#tutorials)
     1. [Multiple sensors with same I2C address](#multiple-sensors-with-same-i2c-address)
     2. [Pull-up resistors on I2C lines](#pull-up-resistors-on-i2c-lines)
+8. [Documentation](#documentation)
 
 ## Preface
 
@@ -318,28 +319,6 @@ by reading [this section](#example-use).
 | SFC6000 | Mass Flow Controller | UART | [raspberry-pi-uart-sfx6xxx](https://github.com/Sensirion/raspberry-pi-uart-sfx6xxx) |
 
 
-## Tutorials
-
-### Multiple sensors with same I2C address
-If you need to connect multiple sensors with the same I2C address to your board, you have different options.
-
-1. Change the I2C address of the sensor. This is possible for some of our sensors, for example for the SF06 Liqui Flow Sensors.
-   - Tutorial article using an ESP32 DevKit board to connect two SLF3x sensors on [hackster.io](https://www.hackster.io/sensirion-software/use-several-slf3x-sensors-on-the-same-i2c-bus-f4aaed)
-   - Example for Arduino in [arduino-i2c-sf06-lf](https://github.com/Sensirion/arduino-i2c-sf06-lf/tree/master/examples/exampleI2cAddressChange) driver repository
-   - Example for Raspberry-Pi in the [raspberry-pi-i2c-sf06-lf](https://github.com/Sensirion/raspberry-pi-i2c-sf06-lf/tree/master/example-i2c-address-change) driver repository
-   
-2. Use a multiplexer
-   - Tutorial article using an Arduino Uno and multiplexer board to connect two SCD41 sensors [hackster.io](https://www.hackster.io/sensirion-software/using-a-multiplexer-to-connect-multiple-sensors-1363d0)
-   - Example code [arduino-i2c-multiplexer-usage](https://github.com/Sensirion/arduino-i2c-multiplexer-usage)
-
-3. Use different I2C buses
-   - Tutorial article using an ESP32 DevKit board to connect two SCD41 sensors on different I2C buses [hackster.io](https://www.hackster.io/sensirion-software/two-separate-i2c-buses-on-esp32-67a65c)
-   - Example code and documentation for a few boards on Arduino IDE platform [arduino-i2c-different-buses-example](https://github.com/Sensirion/arduino-i2c-different-buses-example)
-
-### Pull-up resistors on I2C lines
-For a robust communication over I2C it is important to understand the role of pull-up resistors. You find a documentation
-in the GitHub repository [arduino-i2c-different-buses-example](https://github.com/Sensirion/arduino-i2c-different-buses-example/blob/main/i2c-pull-up-resistors-intro.md).
-
 ## Third party repositories provided by our developer community
 
 > :warning: Please note that libraries listed in this section are not maintained
@@ -432,3 +411,30 @@ Node package which uses Node SerialPort and RXJS to implement Sensirion HDLC.
 
 - NPM package: <https://www.npmjs.com/package/@cytera/sensirion-hdlc>
 - Source code: <https://github.com/cytera/sensirion-hdlc-node>
+
+## Tutorials
+
+### Multiple sensors with same I2C address
+If you need to connect multiple sensors with the same I2C address to your board, you have different options.
+
+1. Change the I2C address of the sensor. This is possible for some of our sensors, for example for the SF06 Liqui Flow Sensors.
+   - Tutorial article using an ESP32 DevKit board to connect two SLF3x sensors on [hackster.io](https://www.hackster.io/sensirion-software/use-several-slf3x-sensors-on-the-same-i2c-bus-f4aaed)
+   - Example for Arduino in [arduino-i2c-sf06-lf](https://github.com/Sensirion/arduino-i2c-sf06-lf/tree/master/examples/exampleI2cAddressChange) driver repository
+   - Example for Raspberry-Pi in the [raspberry-pi-i2c-sf06-lf](https://github.com/Sensirion/raspberry-pi-i2c-sf06-lf/tree/master/example-i2c-address-change) driver repository
+   
+2. Use a multiplexer
+   - Tutorial article using an Arduino Uno and multiplexer board to connect two SCD41 sensors [hackster.io](https://www.hackster.io/sensirion-software/using-a-multiplexer-to-connect-multiple-sensors-1363d0)
+   - Example code [arduino-i2c-multiplexer-usage](https://github.com/Sensirion/arduino-i2c-multiplexer-usage)
+
+3. Use different I2C buses
+   - Tutorial article using an ESP32 DevKit board to connect two SCD41 sensors on different I2C buses [hackster.io](https://www.hackster.io/sensirion-software/two-separate-i2c-buses-on-esp32-67a65c)
+   - Example code and documentation for a few boards on Arduino IDE platform [arduino-i2c-different-buses-example](https://github.com/Sensirion/arduino-i2c-different-buses-example)
+
+### Pull-up resistors on I2C lines
+For a robust communication over I2C it is important to understand the role of pull-up resistors. You find a documentation
+in the GitHub repository [arduino-i2c-different-buses-example](https://github.com/Sensirion/arduino-i2c-different-buses-example/blob/main/i2c-pull-up-resistors-intro.md).
+
+## Documentation
+### Sensirion BLE Specifications
+Do you want to integrate a Sensirion Bluetooth gadget into your own project ?  
+To learn more about the BLE specifications used by Sensirion Bluetooth devices please check out the [dedicated page](https://sensirion.github.io/ble-services/).
